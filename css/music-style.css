@@ -1,0 +1,273 @@
+.arrow-container .music-sizing{
+	display: flex;
+	flex-wrap: wrap;
+	flex-grow: 1;
+	flex-direction: row;
+	align-items: flex-end;
+    height: 200px;
+    opacity: 0.8;
+    transform-style: preserve-3d;
+    -webkit-perspective: 100px;
+    transform:  scale(.5) translateY(10px);
+    position: relative;
+    display: block;
+    bottom: 20px;
+}
+.music-sizing-rotation-block{
+    display: flex;
+	flex-wrap: wrap;
+    flex-grow: 1;
+    height: 200px;
+	flex-direction: row;
+	align-items: flex-end;
+    transform: rotateX(10deg);
+    width: 100%;
+}
+.arrow-container .music-sizing .sound-box{
+	height: 100px;
+	/*background: red;*/
+    -webkit-flex-grow: 1;
+    margin: 0px 10px 0px 10px;
+    overflow: hidden;
+    -webkit-perspective: 100px;
+    position: relative;
+}
+.arrow-container .inner-block{
+    height: 200px;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: linear-gradient(to top,
+     #FFFF3B 0%,#FFFF3B 8%,
+     rgba(173,9,246,0) 8%, rgba(173,9,246,0) 9%,
+     #FFFF3B 9%,#FFFF3B 17%,
+     rgba(173,9,246,0) 17%, rgba(173,9,246,0) 18%,
+     #FFFF3B 18%,#FFFF3B 26%,
+     rgba(173,9,246,0) 26%, rgba(173,9,246,0) 27%,
+     #FFFF3B 27%,#FFFF3B 35%,
+     rgba(173,9,246,0) 35%, rgba(173,9,246,0) 36%,
+
+    #F8BF16 36%,#F8BF16 44%,
+     rgba(173,9,246,0) 44%, rgba(173,9,246,0) 45%,
+     #FA992A 45%,#FA992A 53%,
+     rgba(173,9,246,0) 53%, rgba(173,9,246,0) 54%,
+
+     #EA3924 54%,#EA3924 62%,
+     rgba(173,9,246,0) 62%, rgba(173,9,246,0) 63%,
+
+     #D51C33 63%,#D51C33 71%,
+     rgba(173,9,246,0) 71%, rgba(173,9,246,0) 72%,
+     #BE1F3E 72%,#BE1F3E 80%,
+     rgba(173,9,246,0) 80%, rgba(173,9,246,0) 81%,
+     #8F2559 81%,#8F2559 89%,
+     rgba(173,9,246,0) 89%, rgba(173,9,246,0) 90%,
+     rgba(129, 36, 100, 1) 90%,rgba(129, 36, 100, 0) 98%
+     )
+}
+.box1{
+    animation: anim-1 1s infinite linear;
+}
+.box2{
+    animation: anim-2 1s infinite linear;
+}
+.box3{
+    animation: anim-1 1s infinite reverse linear;
+}
+.box4{
+    animation: anim-2 1s infinite linear;
+}
+.box5{
+    animation: anim-1 1s infinite reverse linear;
+}
+.box6{
+    animation: anim-1 1s infinite linear;
+}
+.box7{
+    animation: anim-3 1s infinite linear;
+}
+.box8{
+    animation: anim-3 1s infinite reverse linear;
+}
+.box9{
+    animation: anim-3 1s infinite linear;
+}
+.box10{
+    animation: anim-1 1s infinite linear;
+}
+.box11{
+    animation: anim-2 1s infinite reverse linear;
+}
+.box12{
+    animation: anim-1 1s infinite linear;
+}
+.box13{
+    animation: anim-2 1s infinite reverse linear;
+}
+.box14{
+    animation: anim-1 1s infinite linear;
+}
+@keyframes anim-1 {
+    0% { height: 10%;  }
+    10% { height: 80%;  }
+    20% { height: 30%;   }
+    30% { height: 100%;   }
+    40% { height: 30%;   }
+    50% { height: 20%; }
+    60% { height: 70%;  }
+    70% { height: 50%;  }
+    80% { height: 90%;  }
+    90% { height: 100%;  }
+    100% { height: 10%; }
+}
+@keyframes anim-2 {
+    0% { height: 40%;  }
+    10% { height: 80%;  }
+    20% { height: 50%;   }
+    30% { height: 70%;   }
+    40% { height: 10%;   }
+    50% { height: 40%; }
+    60% { height: 50%;  }
+    70% { height: 20%;  }
+    80% { height: 60%;  }
+    90% { height: 80%;  }
+    100% { height: 5%; }
+}
+@keyframes anim-3 {
+    0% { height: 40%;  }
+    10% { height: 30%;  }
+    20% { height: 10%;   }
+    30% { height: 40%;   }
+    40% { height: 35%;   }
+    50% { height: 40%; }
+    60% { height: 30%;  }
+    70% { height: 10%;  }
+    80% { height: 30%;  }
+    90% { height: 20%;  }
+    100% { height: 40%; }
+}
+.stop-play{
+    height: 20px;
+    animation: anim-fade 10s ease-in-out infinite;
+}
+@keyframes anim-fade {
+    0% {height:200px;}
+    50% {height:30px;}
+    100% {height:200px;}
+}
+.player-wrapper{
+    float: right;
+    padding: 10px;
+    background: rgba(0, 0, 0, .5);
+    border-radius: 5px;
+    margin-top: -100px;
+    z-index: 50;
+    display: block;
+   position: relative; /**/
+}
+.player-body span{
+    padding: 5px;
+    background: rgba(0,0,0,.6);
+    text-align:center;
+    width: 45%;
+    position: relative;
+    display: inline-block;
+}
+.player-body span:nth-child(odd)::before{
+    content: " duration: ";
+    font-size: 9px;
+}
+.player-wrapper button{
+    width: 50px;
+    height: 50px;
+    background: #000;
+    border: 2px solid #fff;
+    box-sizing: border-box;
+    border-radius: 50%;
+    color: #f46161;
+    font-size: 10px;
+}
+.music-range{
+    width: 90%;
+    height: 10px;
+    background: #404040;
+    margin: 10px;
+    cursor: pointer;
+}
+.music-range .indicator{
+    width: 0%;
+    height: 100%;
+    background: #ff005e;
+}
+.material-icons{
+   /* margin-top:10px;*/
+    float: right;
+}
+.music-range .indicator .dragable{
+    width: 10px;
+    height: 100%;
+    margin-left: 5px;
+    float: right;
+    background: #dbdbdb;
+    cursor: pointer;
+}
+.musicName{
+    width: 300px;
+    overflow: hidden;
+}
+.musicName p{
+    width: 1000vw !important;
+    text-align: left;
+}
+
+.musicList{
+    overflow-y: scroll;
+    max-height: 125px;
+    max-width: 300px;
+}
+.musicList li{
+    color:#fff;
+    font-size: 10px;
+    text-align: left;
+    max-width: 100vh;
+    cursor: pointer;
+    padding: 3px;
+}
+.selected-song{
+    background: none;
+    color: #ff3131 !important;
+}
+.selected-song-temp{
+    background: none;
+    color: #3f68ff !important;
+}
+.shuffleActive{
+    color: black !important;
+    background: white !important;
+}
+.small-button{
+    width:30px !important;
+    height: 30px !important;
+    float: left;
+}
+.volume-wrapper{
+    width: 0px;
+    height: 0px;
+    margin-left: -93px;
+    margin-top: -50px;
+    background: none;
+    border: 0px;
+}
+.volume-wrapper .custom-range{
+    transform: rotate(-90deg);
+    cursor: pointer;
+}
+button:focus {outline:0;}
+
+.video-wrapper video{
+    width: 300px;
+    height: auto;
+}
+.video-wrapper{
+    margin-top: 20px;
+}

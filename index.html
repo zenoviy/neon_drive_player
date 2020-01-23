@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>	Final site</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+<div id="dark-screen" class="dark-screen"></div>
+
+<div class="content-wrapper">
+	<div class="main-menu">
+
+		<nav class="navbar navbar-expand-lg navbar-dark container">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			  <span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<span class="main-logotype">
+					<img src="./images/icons/web_logo1.png" alt="logo">
+				</span>
+				<ul class="navbar-nav menu-list justify-content-end ml-auto">
+					<li class="nav-item active">
+					<a class="nav-link" href="#">Home</a>
+					</li>
+					<li class="nav-item">
+					<a class="nav-link" href="#about-game">About us</a>
+					</li>
+					<li class="nav-item">
+					<a class="nav-link" href="#contact">Contacts</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</div>
+
+	<header class="page-promo-section">
+		<div class="container">
+			<div class="page-title">
+				<div class="main-header-logo">
+					<img src="./images/icons/web_logo1.png" alt="">
+				</div>
+				<div class="player-wrapper"  style="-moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;" 
+ unselectable="on"
+ onselectstart="return false;" 
+ >
+					<div class="player-body">
+						<div id="current-music" class="musicName"></div>
+						<div class="btn-group dropup">
+							<button type="button" class="fa fa-volume-up small-button " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+
+							<div class="dropdown-menu volume-wrapper">
+						    	<input type="range" class="custom-range" id="sound-level">
+						 	</div>
+						</div>
+						
+						<button id="backward" class="fa fa-backward"></button>
+						<button id="play" class="fa fa-play"></button>  <!--"fa fa-pause" --> 
+						<button id="stop" class="fa fa-stop"></button>
+						<button id="forward" class="fa fa-forward"></button>
+
+						<button id="shuffle" class="fa fa-random"></button>
+						
+						<div class="video-wrapper">
+							<video id="videoObject"  style="display:none;"></video>
+						</div>	
+						<div id="sound-range" class="music-range">
+							<div id="indicator" class="indicator">
+								<div id="dragable" class="dragable"></div>
+							</div>
+						</div>
+						<span id="current-time"></span>
+						<span id="duration-time"></span>
+						<ol id="music-list" class="musicList">
+							
+						</ol>
+					</div>
+				</div>
+				<!--<h1> Neon Drive</h1>-->
+					<ul class="brand-wrapper">
+						<li>
+							<a target="blank" href="https://apps.apple.com/app/neon-drive-80s-style-arcade/id1042326602"><img src="./images/icons/AvailableOnSteam_Badge.png" alt=""></a>
+						</li>
+						<li>
+							<a target="blank" href="https://store.steampowered.com/app/433910/Neon_Drive/"><img src="./images/icons/AvailableOnSteam_Badge.png" alt=""></a>
+						</li>
+					</ul>
+				<p>A slick retro-futuristic obstacle-dodging game
+					that will make your brain melt </p>
+			</div>
+			<div class="arrow-container">
+				<!--<div class="arrow-ball"></div>-->
+				<a href="#about-game"><div class="music-sizing">
+					<div id="aqualizer" class="music-sizing-rotation-block">
+						<div class="sound-box box1">
+							<div class="inner-block"></div>
+						</div>
+						<div class="sound-box box2">
+								<div class="inner-block"></div>
+						</div>
+						<div class="sound-box box3">
+								<div class="inner-block"></div>
+						</div>
+						<div class="sound-box box4">
+							<div class="inner-block"></div>
+						</div>
+						<div class="sound-box box5">
+							<div class="inner-block"></div>
+						</div>
+						<div class="sound-box box6">
+							<div class="inner-block"></div>
+						</div>
+						<div class="sound-box box7">
+							<div class="inner-block"></div>
+						</div>
+						<div class="sound-box box8">
+							<div class="inner-block"></div>
+						</div>
+						<div class="sound-box box9">
+							<div class="inner-block"></div>
+						</div>
+						<div class="sound-box box10">
+							<div class="inner-block"></div>
+						</div>
+						<div class="sound-box box11">
+							<div class="inner-block"></div>
+						</div>
+						<div class="sound-box box12">
+							<div class="inner-block"></div>
+						</div>
+						<div class="sound-box box13">
+							<div class="inner-block"></div>
+						</div>
+						<div class="sound-box box14">
+							<div class="inner-block"></div>
+						</div>
+					</div>
+				</div></a>
+			</div>
+		</div>
+	</header>
+
+	<main class="content-body container">
+		<div class="content-main-field">
+			<a id="about-game"></a>
+			<h2>About Neon Games</h2>
+
+			<section class="content-card-wrapper">
+				<div class="content-card">
+					<div class="card-image-section">
+						<img src="./images/backrounds/28c.jpg" alt="">
+					</div>
+
+					<div class="card-text-wrapper">
+						<div class="card-text-field">
+							<p>Neon Drive is a slick retro-futuristic arcade game that will make your brain melt. You've been warned.</p>
+						</div>
+						<button class="card-btn">visit</button>
+					</div>
+				</div>
+				<div class="content-card">
+					<div class="card-image-section">
+						<img src="./images/backrounds/maxresdefault.jpg" alt="">
+					</div>
+					<div class="card-text-wrapper">
+						<div class="card-text-field">
+							<p>Neon Drive is a slick retro-futuristic arcade game that will make your brain melt. You've been warned.</p>
+						</div>
+						<input class="card-btn" type="button" value="Contact us">
+					</div>
+				</div>
+
+				<div class="content-card">
+					<div class="card-image-section">
+						<img src="./images/backrounds/neon_drive_by_vbastv-dalq3e5.png.jpeg" alt="">
+					</div>
+					<div class="card-text-wrapper">
+						<div class="card-text-field">
+							<p>Neon Drive is a slick retro-futuristic arcade game that will make your brain melt. You've been warned.</p>
+						</div>
+						<span class="card-btn"> read more</span>
+					</div>
+				</div>
+			</section>
+
+			<div class="info-block-area">
+				<h2>Description</h2>
+				<div class="info-text-content">
+					<div class="inner-section-wrapper row">
+						<div class="col-md-5 col-sm-12">
+							<h4>unique levels</h4>
+							<p>From beautiful cityscapes and ocean roads to exploding enemy spaceships,
+								Neon Drive has it all. It's inspired by the arcade games of the 80's, but set against
+								a futuristic backdrop of glowing cyber-grid, all in silky-smooth graphics. Neon Drive
+								brings you 8 amazing levels, adding up to hours of enjoyment. Each level features multiple
+								twists and perspective changes, keeping you on your toes (err, wheels) throughout the gameplay.
+							</p>
+						</div>
+						<div class="video right-side col-md-7 col-sm-12">
+							<video controls="controls" poster="./images/backrounds/screenshot1_.png">
+								<source src="./video/Neon Drive - Announce Trailer - PS4.mp4" type='video/mp4' >
+							</video>
+						</div>
+					</div>
+					<div class="inner-section-wrapper row">
+						<div class="col-md-5 col-sm-12">
+							<h4>3 difficulty modes</h4>
+							<p>
+								Neon Drive will put your mad dodging skills to a real test, mercilessly pushing the limits of
+								your reaction time and short-term memory to avoid obstacles and dead-ends. Seriously, this game
+								is wicked; just when you think you've got the hang of it, it turns the table on you.
+							</p>
+						</div>
+						<div class="video right-side col-md-7 col-sm-12 float-left">
+							<video controls="controls" poster="./images/backrounds/NeonDrive_Wallpaper_01-1.jpg">
+								<source src="./video/Neon Drive Gameplay Video (v1.15).mp4" type='video/mp4' >
+							</video>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+		<aside class="side-bar-panel">
+			<div class="upper-panel-text-area">
+				<h2>Neon Drive</h2>
+				<p>Neon Drive is a slick retro-futuristic,
+					'80s inspired arcade game that will make your brain melt.
+					You've been warned.From beautiful cityscapes and ocean roads
+					 to exploding enemy spaceships, Neon Drive has it all. </p>
+			</div>
+			<div class="side-pannel-card">
+				<div class="inner-panell">
+					<div class="text-area">
+						<p>Neon Drive Game Soundtrack</p>
+					</div>
+					<img src="./images/backrounds/oqJFs67 - Imgur.gif" alt="">
+				</div>
+				<div class="outer-pannel">
+					<a href="https://fraoula1.bandcamp.com/releases" target="blank"><div class="text-area">
+						<h2>SOUNDTRACK</h2>
+					</div></a>
+					<img src="https://neondrivegame.com/images/nd/thumb5.png" alt="">
+				</div>
+			</div>
+
+		</aside>
+	</main>
+
+
+	<footer class="page-footer">
+		<div class="container">
+			<a id="contact"></a>
+			<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+				<div class="pt-md-5">
+					<h4>LITS education project</h4>
+
+					<h5>Lviv 2019</h5>
+					<a href="http://lits.ua/" target="blank">lits.ua</a>
+				</div>
+			</div>
+		</div>
+	</footer>
+</div>
+
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="./js/jquery-3.1.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<script type="text/javascript" src="./js/soundDB.js"></script>
+<script src="./js/script.js" ></script>
+
+</html>

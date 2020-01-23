@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+<!--<video id="videoObject" controls="controls" poster="../images/backrounds/screenshot1_.png">
+	<source src="./Neon Drive - Announce Trailer - PS4.mp4" type='video/mp4' >
+</video>-->
+<video id="videoObject" controls="controls">
+</video>
+
+<button id="load-video">video load</button>
+</body>
+<script>
+
+	window.onload = function(){
+		var loadVideo = document.querySelector('#load-video');
+		var videoObject = document.querySelector('#videoObject');
+
+		loadVideo.addEventListener('click', function(){
+			console.log(videoObject)
+			videoObject.setAttribute("src", "./Neon Drive - Announce Trailer - PS4.mp4");
+
+			console.log()
+		})
+	}
+	
+</script>
+
+<script>
+	
+	
+</script>
+</html>
