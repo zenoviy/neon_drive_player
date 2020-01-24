@@ -208,10 +208,9 @@ var musicPlayer = {
 		});
 		document.addEventListener('mouseup', function(e){
 			if(object.rangeClicked){
-				object.rangeClicked = false;	
+				object.rangeClicked = false;
 				setRangePosition(e, object.playerUi.soundRange);
 			}
-			
 		});
 
 		this.playerUi.soundRange.addEventListener('mousemove', function(e){
@@ -323,4 +322,3 @@ var layerView = {
 	var music = musicDB; 		// music Database  in JSON Object format
 	musicPlayer.playerInit();
 
-		
